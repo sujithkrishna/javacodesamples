@@ -1,11 +1,11 @@
 
-class SumofNoThread extends Thread{
-	
-	public int sum=0;
-	
+class SumofNoThread extends Thread {
+
+	public int sum = 0;
+
 	public void run() {
-		for(int i=1;i<=100;i++) {
-			sum+=i;
+		for (int i = 1; i <= 100; i++) {
+			sum += i;
 		}
 		System.out.println("Output is ready.....");
 		System.out.println("SO many Number of lines needs to execute...");
@@ -16,7 +16,7 @@ class SumofNoThread extends Thread{
 			e.printStackTrace();
 		}
 	}
-	
+
 }
 
 public class SumofNumbers {
@@ -30,8 +30,8 @@ public class SumofNumbers {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		System.out.println("Sum is "+obj.sum);
-		
+		System.out.println("Sum is " + obj.sum);
+
 	}
 
 }

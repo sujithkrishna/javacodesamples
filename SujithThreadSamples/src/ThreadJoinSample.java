@@ -6,7 +6,8 @@ class VenueFixing extends Thread {
 			System.out.println("Venue is getting fixing..");
 			try {
 				Thread.sleep(1000);
-			} catch (InterruptedException e) {}
+			} catch (InterruptedException e) {
+			}
 		}
 		System.out.println("Venue is  fixed..");
 	}
@@ -18,7 +19,8 @@ class WeddingCardPrinting extends Thread {
 			System.out.println("Wedding Card Printing is going on ..");
 			try {
 				Thread.sleep(1000);
-			} catch (InterruptedException e) {}
+			} catch (InterruptedException e) {
+			}
 		}
 		System.out.println("Wedding Card Printing is  completed..");
 	}
@@ -30,7 +32,8 @@ class WeddingCardDistribution extends Thread {
 			System.out.println("WeddingCardDistribution is going on..");
 			try {
 				Thread.sleep(1000);
-			} catch (InterruptedException e) {}
+			} catch (InterruptedException e) {
+			}
 		}
 		System.out.println("WeddingCardDistribution is  completed..");
 	}
@@ -43,18 +46,17 @@ public class ThreadJoinSample {
 		VenueFixing venue = new VenueFixing();
 		WeddingCardPrinting weddingCardPrinting = new WeddingCardPrinting();
 		WeddingCardDistribution weddingCardDistribution = new WeddingCardDistribution();
-		
+
 		venue.start();
 		venue.join();
-		//venue.join(5000);
+		// venue.join(5000);
 		weddingCardPrinting.start();
 		weddingCardPrinting.join();
-		//weddingCardPrinting.join(5000);
+		// weddingCardPrinting.join(5000);
 		weddingCardDistribution.start();
 		weddingCardDistribution.join();
-		//weddingCardDistribution.join(5000);
-		
-		
+		// weddingCardDistribution.join(5000);
+
 	}
 
 }

@@ -28,7 +28,7 @@ public class ThreadWaitNotifiy {
 			synchronized (obj) {
 				obj.wait();
 			}
-			
+
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

@@ -1,26 +1,25 @@
 
-class SynThread1 extends Thread{
-	
-	public String soap ="HandWashing";
-	
+class SynThread1 extends Thread {
+
+	public String soap = "HandWashing";
+
 	public void run() {
-		
+
 		synchronized (soap) {
-			for(int i=0;i<10;i++) {
+			for (int i = 0; i < 10; i++) {
 				try {
-					System.out.println(i+" -> Washing Hand....by :"+Thread.currentThread().getName());
+					System.out.println(i + " -> Washing Hand....by :" + Thread.currentThread().getName());
 					Thread.sleep(1000);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
-				System.out.println(i+" -> Hand Washed completed by :"+Thread.currentThread().getName());
+				System.out.println(i + " -> Hand Washed completed by :" + Thread.currentThread().getName());
 			}
 		}
-		
+
 	}
 
 }
-
 
 public class JavaSynExample {
 
