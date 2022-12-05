@@ -7,6 +7,14 @@ class SumofNoThread extends Thread{
 		for(int i=1;i<=100;i++) {
 			sum+=i;
 		}
+		System.out.println("Output is ready.....");
+		System.out.println("SO many Number of lines needs to execute...");
+		try {
+			Thread.sleep(1000);
+			System.out.println("Lines are executed now...");
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 	
 }
