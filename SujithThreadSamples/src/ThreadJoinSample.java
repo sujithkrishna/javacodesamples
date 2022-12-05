@@ -46,10 +46,13 @@ public class ThreadJoinSample {
 		
 		venue.start();
 		venue.join();
+		//venue.join(5000);
 		weddingCardPrinting.start();
 		weddingCardPrinting.join();
+		//weddingCardPrinting.join(5000);
 		weddingCardDistribution.start();
 		weddingCardDistribution.join();
+		//weddingCardDistribution.join(5000);
 		
 		
 	}
