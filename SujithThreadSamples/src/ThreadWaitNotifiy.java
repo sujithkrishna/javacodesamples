@@ -24,10 +24,11 @@ class SumofThreadExamplesWait extends Thread {
 
 public class ThreadWaitNotifiy {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 
 		SumofThreadExamplesWait obj = new SumofThreadExamplesWait();
 		obj.start();
+		//Thread.sleep(10000);
 		try {
 			synchronized (obj) {
 				obj.wait();
