@@ -1,7 +1,7 @@
 
 class WriteMessae{
 	
-	public  synchronized void displayMessage(String name) {
+	public static synchronized void displayMessage(String name) {
 		for(int i=0;i<10;i++) {
 			System.out.println("Hello Good Mornming..."+name);
 			try {
@@ -33,9 +33,10 @@ class MyThreadWrite extends Thread{
 public class GoodMorningMessage {
 
 	public static void main(String[] args) {
-		WriteMessae write = new WriteMessae();
-		MyThreadWrite hello1= new MyThreadWrite(write, "Sujith");
-		MyThreadWrite hello2= new MyThreadWrite(write, "Krishna");
+		WriteMessae write1 = new WriteMessae();
+		WriteMessae write2 = new WriteMessae();
+		MyThreadWrite hello1= new MyThreadWrite(write1, "Sujith");
+		MyThreadWrite hello2= new MyThreadWrite(write2, "Krishna");
 		hello1.start();
 		
 		hello2.start();
